@@ -20,6 +20,7 @@ gem "will_paginate", "3.1.5"
 gem "acts_as_votable"
 gem "devise"
 gem "config"
+gem "font-awesome-rails"
 group :development, :test do
   gem "rspec"
   gem "rspec-rails"

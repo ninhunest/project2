@@ -74,6 +74,12 @@
     "number_of_controllers": 1,
     "number_of_models": 1,
     "number_of_templates": 2,
+    "number_of_controllers": 1,
+    "number_of_models": 1,
+    "number_of_templates": 2,
+    "number_of_controllers": 2,
+    "number_of_models": 7,
+    "number_of_templates": 5,
     "ruby_version": "2.4.1",
     "brakeman_version": "4.0.1"
   },
@@ -90,3 +96,4 @@
 
   ]
 }
+>>>>>>> finished static pages
