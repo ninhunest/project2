@@ -12,4 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min.css
+ *= require clean-blog.css
+ *= require clean-blog.min.css
+ *= require font-awesome.min.css
  */
