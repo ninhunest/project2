@@ -19,6 +19,7 @@ gem "uglifier", "3.2.0"
 gem "will_paginate", "3.1.5"
 gem "acts_as_votable"
 gem "devise"
+gem "config"
 group :development, :test do
   gem "rspec"
   gem "rspec-rails"
