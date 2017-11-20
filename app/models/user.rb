@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   devise :database_authenticatable, :registerable, :recoverable,
-   :rememberable, :trackable, :validatable,:confirmable
+   :rememberable, :trackable, :validatable
 
   validates :name, presence: true,
     length: {maximum: Settings.max_length_name_user}

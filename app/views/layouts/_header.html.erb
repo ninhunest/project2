@@ -15,12 +15,24 @@
         <li class="nav-item">
           <%= link_to t("users"), "#" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t("sign_up"),"#" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t("log_in"), "#" %>
-        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t("profile"), "#" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("settings"), edit_user_registration_path(current_user) %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("logout"), destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t("sign_up"),new_user_registration_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("log_in"), new_user_session_path  %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -35,5 +47,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </div>
 </header>

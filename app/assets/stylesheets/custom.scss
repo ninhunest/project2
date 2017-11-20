@@ -1,7 +1,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import 'color';
 @import 'clean-blog';
+@import 'color';
 
 .dropdown-menu {
   border: none;
@@ -34,9 +34,9 @@ h1 {
 }
 
 .navbar-custom .nav li a {
-  color: $blue;
+color: $blue;
 }
 
-.overlay {
+.overlay{
   background-image: url('/assets/mission-tampa-header-background-dark-gray-001.jpg');
 }
