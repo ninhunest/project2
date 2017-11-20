@@ -5,7 +5,7 @@
  */
 body {
   font-size: 20px;
-  color: #212529;
+  color: jetblack;
   font-family: 'Lora', 'Times New Roman', serif; }
 
 p {
@@ -24,16 +24,16 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 a {
-  color: #212529;
+  color: jetblack;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
   a:focus, a:hover {
-    color: #0085A1; }
+    color: blueo; }
 
 blockquote {
   font-style: italic;
-  color: #868e96; }
+  color: grey; }
 
 .section-heading {
   font-size: 36px;
@@ -52,12 +52,12 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: blueo;
   text-shadow: none; }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: blueo;
   text-shadow: none; }
 
 img::selection {
@@ -69,7 +69,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #0085A1; }
+  -webkit-tap-highlight-color: blueo; }
 
 #mainNav {
   position: absolute;
@@ -126,13 +126,13 @@ body {
         border-bottom: 1px solid white;
         background-color: rgba(255, 255, 255, 0.9); }
         #mainNav.is-fixed .navbar-brand {
-          color: #212529; }
+          color: jetblack; }
           #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-            color: #0085A1; }
+            color: blueo; }
         #mainNav.is-fixed .navbar-nav > li.nav-item > a {
-          color: #212529; }
+          color: jetblack; }
           #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-            color: #0085A1; }
+            color: blueo; }
       #mainNav.is-visible {
         /* if the user changes the scrolling direction, we show the header */
         -webkit-transform: translate3d(0, 100%, 0);
@@ -144,7 +144,7 @@ body {
 header.masthead {
   margin-bottom: 50px;
   background: no-repeat center center;
-  background-color: #868e96;
+  background-color: grey;
   background-attachment: scroll;
   position: relative;
   -webkit-background-size: cover;
@@ -157,7 +157,7 @@ header.masthead {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #212529;
+    background-color: jetblack;
     opacity: 0.5; }
   header.masthead .page-heading,
   header.masthead .post-heading,
@@ -213,10 +213,10 @@ header.masthead {
       font-size: 30px; } }
 
 .post-preview > a {
-  color: #212529; }
+  color: jetblack; }
   .post-preview > a:focus, .post-preview > a:hover {
     text-decoration: none;
-    color: #0085A1; }
+    color: blueo; }
   .post-preview > a > .post-title {
     font-size: 30px;
     margin-top: 30px;
@@ -229,13 +229,13 @@ header.masthead {
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
-  color: #868e96; }
+  color: grey; }
   .post-preview > .post-meta > a {
     text-decoration: none;
-    color: #212529; }
+    color: jetblack; }
     .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
       text-decoration: underline;
-      color: #0085A1; }
+      color: blueo; }
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
@@ -261,7 +261,7 @@ header.masthead {
     font-family: 'Lora', 'Times New Roman', serif; }
     .floating-label-form-group input::-webkit-input-placeholder,
     .floating-label-form-group textarea::-webkit-input-placeholder {
-      color: #868e96;
+      color: grey;
       font-family: 'Lora', 'Times New Roman', serif; }
   .floating-label-form-group label {
     font-size: 0.85em;
@@ -286,7 +286,7 @@ header.masthead {
   opacity: 1; }
 
 .floating-label-form-group-with-focus label {
-  color: #0085A1; }
+  color: blueo; }
 
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6; }
@@ -311,8 +311,8 @@ footer {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1; }
+  background-color: blueo;
+  border-color: blueo; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #fff;
     background-color: #00657b !important;

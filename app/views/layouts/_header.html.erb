@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <%= link_to t("start_bootstrap"), root_path %>
+    <%= link_to t("fsociety"), root_path %>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa fa-bars"></i>
     </button>
@@ -12,12 +12,24 @@
         <li class="nav-item">
           <%= link_to t("users"), "#" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t("sign_up"),"#" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t("log_in"), "#" %>
-        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t("profile"), "#" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("settings"), edit_user_registration_path(current_user) %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("logout"), destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t("sign_up"),new_user_registration_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t("log_in"), new_user_session_path  %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -33,4 +45,9 @@
       </div>
     </div>
   </div>
+  <div class="col-md-6 col-md-offset-3">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
 </header>
+
