@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-lg-8">
+      <h1 class="mt-4"><%= @post.title %></h1>
+      <p class="lead">
+        <%= t("tags") %>
+        <% if @post.tags.any? %>
+          <span class="badge badge-info">
+            <% @post.tags.each do |tag| %>
+              <%= link_to tag.name, tag %>,
+            <% end %>
+          </span>
+        <% end %>
+      </p>
+      <hr>
+      <p><%= @post.updated_at %></p>
+      <hr>
+        <%= image_tag @post.picture_url.to_s if @post.picture? %>
+      <hr>
+      <p class="content">
+        <%= raw @post.content %>
+      </p>
+      <hr>
+      <% if @post.user.current_user? current_user %>
+        <%= link_to t("delete"), @post,
+          method: :delete, data: { confirm: "You sure?" } %>
+        <%= link_to t("edit"), edit_post_path(@post) %>
+      <% end %>
+    </div>
+</div>

@@ -81,6 +81,12 @@ GEM
       carrierwave
       fog
       uuidtools
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     code_analyzer (0.4.8)
       sexp_processor
     codeclimate-engine-rb (0.4.0)
@@ -450,7 +456,7 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
-    rspec-rails (3.7.1)
+    rspec-rails (3.7.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -556,6 +562,7 @@ DEPENDENCIES
   bundler-audit
   carrierwave (= 1.1.0)
   carrierwave_direct
+  ckeditor
   coffee-rails (= 4.2.2)
   config
   database_cleaner

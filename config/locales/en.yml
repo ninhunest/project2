@@ -27,3 +27,5 @@ en:
   password_confirmation: "Password confirmation"
   current_password: "Current password"
   need_current_password: "need current password"
+  post: "Post"
+  tags: "tags"
