@@ -1,0 +1,42 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color';
+@import 'clean-blog';
+
+.dropdown-menu {
+  border: none;
+  background-color: $gray-light;
+  min-width: 121px;
+}
+
+.banner-home {
+  background-image: url('/assets/banner.jpg');
+}
+
+.banner-contact {
+  background-image: url('/assets/contact.jpg');
+}
+
+.yield {
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.navbar-custom .navbar-brand {
+  color: $blue;
+}
+
+.navbar-custom .nav li a {
+  color: $blue;
+}
+
+.overlay {
+  background-image: url('/assets/mission-tampa-header-background-dark-gray-001.jpg');
+}
