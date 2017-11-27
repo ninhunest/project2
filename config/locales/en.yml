@@ -29,3 +29,5 @@ en:
   need_current_password: "need current password"
   post: "Post"
   tags: "tags"
+  unfollow: "unfollow"
+  follow: "follow"

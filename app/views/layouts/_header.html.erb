@@ -12,12 +12,12 @@
         <li class="nav-item">
           <%= link_to t("post"), posts_path %>
         </li>
+        <li class="nav-item">
+        <%= link_to t("users"), users_path %>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to current_user.name, current_user %>
-          </li>
-          <li class="nav-item">
-            <%= link_to t("settings"), edit_user_registration_path(current_user) %>
           </li>
           <li class="nav-item">
             <%= link_to t("logout"), destroy_user_session_path, method: :delete %>

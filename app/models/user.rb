@@ -15,6 +15,8 @@ class User < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.max_length_name_user}
 
+  scope :sort_by_id, ->{order :id}
+
   def self.from_omniauth auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.name = auth.info.name
@@ -33,5 +35,17 @@ class User < ApplicationRecord
 
   def current_user? user
      self == user
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 end

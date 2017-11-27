@@ -5,12 +5,10 @@ class PostsController < ApplicationController
 
   def index
     if user_signed_in?
-      @posts = current_user.posts.sort_by_updated.paginate page: params[:page],
+      @posts = Post.feed(current_user.id).sort_by_updated.paginate page: params[:page],
         per_page: 5
     else
-      @posts = Post.select(:id, :title, :content, :user_id, :updated_at, :picture)
-      .sort_by_updated.paginate page: params[:page],
-        per_page: 5
+      @posts = Post.sort_by_updated.paginate page: params[:page], per_page: 5
     end
   end
 

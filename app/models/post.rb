@@ -9,7 +9,12 @@ class Post < ApplicationRecord
     length: {maximum: Settings.max_length_title_post}
   validates :content, presence: true
   scope :sort_by_updated, ->{order updated_at: :desc}
-
+  scope :feed, (lambda do |user_id|
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE follower_id = :user_id"
+    where("user_id IN (#{following_ids})
+      OR user_id = :user_id", user_id: user_id)
+  end)
   def list_tags= names
     self.tags = names.split(",").map do |name|
       Tag.where(name: name.strip).first_or_create!
