@@ -1,0 +1,11 @@
+<div id="add_comment">
+  <%= form_for [@post, resource_comment] do |f| %>
+    <div class="input-group" >
+      <%= f.text_field :content, class: "form-control animated",
+        placeholder: t("content"), cols: "50", rows: "5",
+        id: "new-content-comment", autocomplete: :off %>
+      <span class="input-group-addon"><%= f.submit t("comment"),
+        id: "comment_submit", class: "btn-success" %></span>
+    </div>
+  <% end %>
+</div>

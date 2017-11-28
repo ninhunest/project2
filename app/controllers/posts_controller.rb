@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :load_post, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: %i(edit update)
+  before_action :correct_user, only: %i(edit update destroy)
 
   def index
     if user_signed_in?
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     else
       flash[:danger] = t ".delete_failed"
     end
-    redirect_to posts_path
+    redirect_to request.referrer
   end
 
   private
