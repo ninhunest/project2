@@ -10,7 +10,8 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
   devise :database_authenticatable, :registerable, :recoverable,
     :rememberable, :trackable, :validatable, :omniauthable,
-    omniauth_providers: [:facebook]
+    :omniauth_providers => [:facebook]
+
   validates :name, presence: true,
     length: {maximum: Settings.max_length_name_user}
 
