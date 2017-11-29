@@ -4,7 +4,10 @@ class UsersController < ApplicationController
 
   def index; end
 
-  def show; end
+  def show
+    @posts = @user.posts.sort_by_updated.paginate page: params[:page],
+    per_page: 5
+  end
 
   private
 
