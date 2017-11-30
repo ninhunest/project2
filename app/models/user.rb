@@ -30,4 +30,8 @@ class User < ApplicationRecord
       end
     end
   end
+
+  def current_user? user
+     self == user
+  end
 end

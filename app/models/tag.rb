@@ -4,4 +4,9 @@ class Tag < ApplicationRecord
 
   validates :name, presence: true,
     length: {maximum: Settings.max_length_name_tag}
+
+  def self.counts
+    self.select("name, count(post_tags.tag_id) as count").joins(:post_tags).group(
+      "post_tags.tag_id")
+  end
 end

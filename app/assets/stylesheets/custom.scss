@@ -40,3 +40,18 @@ color: $blue;
 .overlay{
   background-image: url('/assets/mission-tampa-header-background-dark-gray-001.jpg');
 }
+
+/* flash message */
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.ajax-error {
+  @extend .alert-danger;
+  display: none;
+}
